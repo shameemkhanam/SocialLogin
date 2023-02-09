@@ -1,0 +1,17 @@
+<div class="m-5 p-5">
+  <span>Login with Google</span>
+  <asl-google-signin-button *ngIf="!user"></asl-google-signin-button>
+  
+</div>
+<div *ngIf="user">
+  <img src="{{user.photoUrl}}" alt="">
+  <div>
+    <h4>{{user.name}}</h4>
+    <p>{{user.email}}</p>
+    <p>{{user.provider}}</p>
+  </div>
+</div>
+
+<div>
+  <button (click)="signInWithFB()">Login with FB</button>
+</div>
